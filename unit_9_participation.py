@@ -11,10 +11,12 @@ class Die():
         self.sides = sides
         
     def roll_die(self):
-        return randint(1,self.sides)
+        roll: int = randint(1,self.sides)
+        print(f"You rolled a {roll} on a {die_1.sides} sided die")
+        
     
 if __name__ == "__main__":
     die_1: Die = Die(6)
-    print(f"You rolled a {die_1.roll_die()} on a {die_1.sides} sided die")
-    die_2: Die = Die(100)
-    print(f"You rolled a {die_2.roll_die()} on a {die_2.sides} sided die")
+    die_2: Die = Die(10)
+    die_3: Die = Die(20)
+    
