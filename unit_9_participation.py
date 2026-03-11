@@ -3,14 +3,32 @@ Name: Unit 9 Participation Activity: Dice
 Author: Jordan Betz
 Description: Class based dice rolling program
 Date: 3/11/2026
+Classes: 
+    Die: Used to create and roll a die with a provided number of sides
+        Attributes: 
+            sides (int): Number of sides on the die
+        Methods: 
+            roll_die(): Prints the roll of a die with provided sides
 """
 from random import randint
 
-class Die():
+class Die(object):
+    """Used to create and roll a die with a provided number of sides
+    
+    Attributes:
+        sides (int): specified number of sides on die 
+    """
     def __init__(self, sides: int):
-        self.sides = sides
+        """Constructor for die
+
+        Args:
+            sides (int): specified number of sides on die
+        """
+        self.sides: int = sides
         
     def roll_die(self):
+        """Rolls die using own sides value as max and prints result
+        """
         roll: int = randint(1,self.sides)
         print(f"You rolled a {roll} on a {self.sides} sided die")
         
