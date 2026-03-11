@@ -32,12 +32,15 @@ class Die(object):
         roll: int = randint(1,self.sides)
         print(f"You rolled a {roll} on a {self.sides} sided die")
         
-    
+
+#Run if this file is the main file
 if __name__ == "__main__":
+    #Create dice and put them into a list
     die_1: Die = Die(6)
     die_2: Die = Die(10)
     die_3: Die = Die(20)
     dice: list[Die] = [die_1, die_2, die_3]
+    #Rolls each die in the list 10 times
     for die in dice:
         for _ in range(10):
             die.roll_die()
